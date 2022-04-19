@@ -1,0 +1,103 @@
+<!DOCTYPE HTML>
+<html lang = "ru">
+<style>
+    .bgFON{
+    position:absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: auto;
+    min-height: 100%;
+    min-width: 1024px;
+    background-color: "#000";
+    background: url(pics/empty_steet.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    }
+</style>
+<div class = "bgFON">
+<head>
+	<title>Форма для заполнения базы данных</title>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<font color ="white">
+	<h1 align ="center" face="Times New Romance"><ins>Upgrade PC</ins></h1>
+</head>
+<body>
+	<h1>Найти данные:</h1>
+	<a href ="form_for_db_filters.html">
+		<button>Найти данные</button>
+	</a>
+	<div class="container mt-4">
+        <h1>Добавить данные:</h1>
+        <form action="site.php" method="post" class="form">
+			<div>
+				<h2>Данные о клиенте:</h2>
+				<h4>Введите ФИО клиента</h4>
+				<input type="text" class="form-control"
+				name="FIO_Client" id="FIO_Client">  
+				<h4>Введите номер телефона</h4>
+				<input type="number" min = "1" max = "99999999999" class="form-control"
+				name="Phone_number" id="Phone_number" value = "1">  
+				<h4>Введите Адрес проживания</h4>
+				<input type="text" class="form-control" name="Address" id="Address">   	
+			</div>
+			<div>
+				<h2>Заполнение данных о заказе:</h2>
+				<h4>Введите нужен ли срочный ремонт(да/нет)<h4>
+				<input type="text" class="form-control" name="Urgent_repairs" id="Urgent_repairs">  
+				<h4>Выберите номер автобуса для забора/доставки ПК</h4>
+				<select name="BusSelect">
+					<option value="Не нужны оба автобуса">Не нужны оба автобуса</option>
+					<option value="Нужен первый автобус">Нужен первый автобус</option>
+					<option value="Нужен второй автобус">Нужен второй автобус</option>
+				</select>
+				<h4>Выберите номер приёмного пункта для обращения</h4>
+				<select name="Reception_point_Select">
+					<option value="1">Первый приёмный пункт</option>
+					<option value="2">Второй приёмный пункт</option>
+					<option value="3">Третий приёмный пункт</option>
+				</select>
+				<h4>Выберите деталь для замены</h4>
+				<select name="Pieces_Select">
+					<option value="1">Видеокарта</option>
+					<option value="2">Материнская плата</option>
+					<option value="3">Процессор</option>
+					<option value="4">Твердотельный накопитель(ССД)</option>
+					<option value="5">Жесткий диск</option>
+					<option value="6">Куллер</option>
+					<option value="7">ОЗУ</option>
+					<option value="8">ПЗУ</option>
+					<option value="9">Сетевая карта</option>
+					<option value="10">Системный блок</option>
+					<option value="11">Блок питания</option>
+				</select>
+				<h4>Выберите проблему(неполадку) из списка</h4>
+				<select name="Problem_Select">
+					<option value="1">Проблема с Видеокартой</option>
+					<option value="2">Проблема с Материнской платой</option>
+					<option value="3">Проблема с Процессором</option>
+					<option value="4">Проблема с Твердотельным накопителем(ССД)</option>
+					<option value="5">Проблема с Жестким диском</option>
+					<option value="6">Проблема с Куллером</option>
+					<option value="7">Проблема с ОЗУ</option>
+					<option value="8">Проблема с ПЗУ</option>
+					<option value="9">Проблема с Сетевой картой</option>
+					<option value="10">Проблема с Системным блоком</option>
+					<option value="11">Проблема с Блоком питания</option>
+				</select>
+			</div>
+			<div>
+				<br>
+				<br>
+				<button class="btn btn-success" type="submit">Добавить данные</button>
+				<br>
+				<br>
+			</div> 
+		</form>
+    </div>
+</body>
+</div>
+</html>

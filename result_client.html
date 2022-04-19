@@ -1,0 +1,64 @@
+<!DOCTYPE HTML>
+<html lang = "ru">
+<style>
+    .bgFON{
+    position:absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: auto;
+    min-height: 100%;
+    min-width: 1024px;
+    background-color: "#000";
+    background: url(pics/BlackHole.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    }
+</style>
+<div class = "bgFON">
+<head>
+	<title>Форма для заполнения базы данных</title>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<font color ="white">
+	<h1 align ="center" face="Times New Romance"><ins>Upgrade PC</ins></h1>
+</head>
+<body>
+	<div class="container mt-4">
+        <h1>Данные:</h1>
+        <form action="site_filters.php" method="post" class="form">
+			<div>
+				<h2>Данные о клиенте:</h2>
+				<h4>Введите ФИО клиента</h4>
+				<input type="text" class="form-control" name="FIO_Client" id="FIO_Client"> 
+			</div>
+			<div>
+				<br>
+				<select name="Choice">
+					<option value="1">Вывести данные о клиенте</option>
+					<option value="2">Вывести данные о заказе</option>
+				</select>
+			</div>
+			<div>
+				<br> 
+				<button class="btn btn-success" name ="but" type="submit">Найти данные</button>
+				<br>
+			</div> 
+			<span>
+			<?php
+				echo "<br/>"; printf("id клиента = %d", $Number_of_client); 
+				echo "<br/>"; printf("ФИО клиента = %s", $client_FIO_check);
+				echo "<br/>";
+				printf("Телефонный номер = %s", $Phone_number);
+				echo "<br/>";
+				printf("Адрес клиента = %s", $Address);
+				echo "<br/>"; 
+			?>
+			</span>
+		</form>
+    </div>
+</body>
+</div>
+</html>
